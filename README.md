@@ -1,4 +1,4 @@
-# bdi-flow-skills
+# kimi-skills-op
 
 > 一套面向 Kimi Skills 生态的 BDI-based 运维工具集。
 

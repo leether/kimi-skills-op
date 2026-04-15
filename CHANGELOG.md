@@ -18,7 +18,7 @@
 
 ### Changed
 - `.gitignore` 增加对本地记忆、环境变量文件和敏感密钥的排除规则。
-- 项目名从 `this-computer` 正式更新为 `bdi-flow-skills`，README、CONTRIBUTING、LICENSE 已同步更新。
+- 项目名从 `this-computer` 正式更新为 `kimi-skills-op`，README、CONTRIBUTING、LICENSE 已同步更新。
 
 ### Removed
 - 移除 `BASELINE.md` 和 `ACCEPTANCE_REPORT.md`，使 `share` 分支聚焦为通用 Skills 共享仓库。
