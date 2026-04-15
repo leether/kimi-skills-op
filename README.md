@@ -1,8 +1,8 @@
 # bdi-flow-skills
 
-> 一个基于 BDI（Belief-Desire-Intention）框架和 Kimi Skills 方法论的通用 Flow Skills 共享仓库。
+> 一套面向 Kimi Skills 生态的 BDI-based 运维工具集。
 
-本仓库收录了多个可复用、可验证的 Kimi Flow Skills，覆盖系统审计、项目初始化、隐私安全合规、开源治理和元自洽检查等场景。所有 Skill 均遵循统一的 `SKILL.md` 开放标准，欢迎社区贡献。
+本仓库聚焦 **"如何设计、编写、检查、治理一个高质量的 Skills 仓库"**。收录的 5 个 Skill 覆盖了从认知框架、编写技巧、发布前检查、维护期自洽到社区治理的完整生命周期。所有 Skill 均遵循统一的 `SKILL.md` 开放标准，欢迎社区贡献。
 
 ---
 
@@ -14,7 +14,7 @@
 ├── LICENSE                # 开源协议
 ├── CONTRIBUTING.md        # 贡献指南
 ├── CHANGELOG.md           # 变更日志
-└── skills/                # 可复用的 Kimi Flow Skills
+└── skills/                # Kimi Skills 运维工具集
 ```
 
 ---
@@ -23,11 +23,11 @@
 
 ### BDI 框架
 
-每一个系统优化决策和 Skill 设计都遵循三层认知模型：
+每一个 Skill 的设计和审查都遵循三层认知模型：
 
-- **Belief（信念）**：对当前系统状态的准确认知
-- **Desire（愿望）**：对理想系统状态的明确目标
-- **Intention（意图）**：可执行、可验证的具体行动计划
+- **Belief（信念）**：对当前 Skills 库状态的准确认知
+- **Desire（愿望）**：对理想 Skills 生态的明确目标
+- **Intention（意图）**：可执行、可验证的治理与优化动作
 
 ### Kimi Skills 方法论
 
@@ -37,37 +37,31 @@
 
 ---
 
-## 🛠️ 优化成果概览
-
-| 维度 | 优化内容 | 状态 |
-|------|---------|------|
-| 系统清理 | 释放 ~4GB 空间，删除僵尸 LaunchAgents | ✅ 已完成 |
-| Shell 增强 | Starship + zsh-autosuggestions + 现代别名 | ✅ 已完成 |
-| Node 管理 | 统一为 fnm，清理旧 nvm | ✅ 已完成 |
-| Python 环境 | 移除冗余 env，恢复系统 `python3` | ✅ 已完成 |
-| Docker 迁移 | 卸载旧 Docker Desktop，安装 Colima + docker v29 CLI | 🟡 待首次启动验证 |
-| 安全加固 | API Keys 迁移至 `~/.zshenv`，删除未使用应用 | ✅ 已完成 |
-| 记忆系统 | 全局记忆中枢 + 项目级本地记忆 | ✅ 已完成 |
-
----
-
 ## 🧩 已收录 Skills
 
 | Skill | 类型 | 描述 |
 |-------|------|------|
 | [`bdi-agent`](./skills/bdi-agent/SKILL.md) | Skill | BDI（信念-愿望-意图）分析框架 |
 | [`programmatic-tools`](./skills/programmatic-tools/SKILL.md) | Skill | 程序化工具调用（PTC）方法论 |
-| [`project-onboarding`](./skills/project-onboarding/SKILL.md) | Flow | 新项目初始化工作流 |
-| [`system-audit`](./skills/system-audit/SKILL.md) | Flow | macOS 系统审计与清理工作流 |
 | [`repo-privacy-gate`](./skills/repo-privacy-gate/SKILL.md) | Flow | 公开仓库隐私安全合规检查门 |
 | [`self-consistency-gate`](./skills/self-consistency-gate/SKILL.md) | Flow | Skills 库自洽性检查门（元治理） |
 | [`kimi-skills-governance`](./skills/kimi-skills-governance/SKILL.md) | Flow | 开源仓库治理工作流 |
+
+### 生命周期对应关系
+
+```
+设计阶段    →  bdi-agent
+编写阶段    →  programmatic-tools
+发布前检查  →  repo-privacy-gate
+维护期检查  →  self-consistency-gate
+社区治理    →  kimi-skills-governance
+```
 
 ---
 
 ## 🤝 如何贡献
 
-我们欢迎所有基于 BDI 框架的改进建议和 Skill 分享！
+我们欢迎所有与 **Skills 设计、检查、治理** 相关的改进建议！
 
 - 📖 请先阅读 [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 - 🐛 提交 Issue 报告问题或分享优化思路
@@ -78,7 +72,3 @@
 ## 📜 许可证
 
 本仓库采用 [MIT License](./LICENSE) 开源。
-
----
-
-> **温馨提示**：本项目中的系统路径和身份信息已做脱敏处理。在参考和复现时，请根据自己的实际环境替换相关变量。

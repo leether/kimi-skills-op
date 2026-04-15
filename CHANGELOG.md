@@ -22,6 +22,7 @@
 
 ### Removed
 - 移除 `BASELINE.md` 和 `ACCEPTANCE_REPORT.md`，使 `share` 分支聚焦为通用 Skills 共享仓库。
+- 移除 `system-audit` 和 `project-onboarding`，将仓库边界收紧为 **Skills 运维工具集**。
 
 ---
 
