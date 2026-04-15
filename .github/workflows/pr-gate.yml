@@ -1,0 +1,35 @@
+name: PR Gate
+
+on:
+  pull_request:
+    branches:
+      - share
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run validation script
+        id: validate
+        run: python validate-skills.py
+
+      - name: Comment PR on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "🚫 **PR Gate failed**\n\nPlease run `python validate-skills.py` locally to fix the reported issues before requesting review."
+            });

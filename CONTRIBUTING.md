@@ -2,19 +2,18 @@
 
 感谢你对 `kimi-skills-op` 项目的关注！
 
-本项目不仅是一个系统优化的记录，更是一个基于 **BDI（Belief-Desire-Intention）框架** 和 **Kimi Skills 方法论** 的知识沉淀仓库。我们欢迎所有建设性的贡献。
+本仓库是一个基于 **BDI（Belief-Desire-Intention）框架** 和 **Kimi Skills 方法论** 的运维工具集，聚焦 **"如何设计、编写、检查、治理一个高质量的 Skills 仓库"**。我们欢迎所有建设性的贡献。
 
 ---
 
 ## 📋 提交前必读
 
 1. **理解项目定位**：
-   - 这是一个**个人开发环境的优化记录 + Skills 方法论展示仓库**。
-   - 核心目标是**可复现、可学习、可迭代**，而非成为一个通用的系统管理工具。
+   - 本仓库是 **Skills 运维工具集**，不是通用技能超市。
+   - 核心目标是帮助 contributor 和 maintainer 产出**结构一致、隐私安全、可持续维护**的 Skill。
 
-2. **阅读现有内容**：
-   - [`BASELINE.md`](./BASELINE.md)：系统环境基线与优化记录
-   - [`ACCEPTANCE_REPORT.md`](./ACCEPTANCE_REPORT.md)：验收标准与验证结果
+2. **阅读现有 Skill**：
+   - 请先浏览 [`skills/`](./skills/) 目录，避免与现有 Skill 高度重复。
 
 3. **保持脱敏原则**：
    - 所有提交到本仓库的内容**不得包含**真实的 API Keys、私钥、主机名、序列号、用户名、内部 IP 等敏感信息。
@@ -27,8 +26,8 @@
 | 类型 | 示例 | 建议方式 |
 |------|------|---------|
 | **文档改进** | 修正错误、补充说明、优化排版 | 直接提 PR |
-| **优化建议** | 针对现有基线提出更优方案 | 先提 Issue 讨论 |
-| **Skill 分享** | 基于 BDI 框架设计的新 Flow Skill | 在 Discussion 中分享思路 |
+| **优化建议** | 针对现有 Skill 提出更优方案 | 先提 Issue 讨论 |
+| **Skill 分享** | 与 Skills 设计/检查/治理相关的新 Flow Skill | 直接提 PR |
 | **问题反馈** | 发现文档中的矛盾、过时内容 | 提 Issue |
 | **翻译** | 将核心文档翻译为其他语言 | 直接提 PR |
 
@@ -46,14 +45,19 @@
 ## 🔄 提交流程
 
 1. **Fork 本仓库**
-2. **创建功能分支**：`git checkout -b improve/your-topic`
-3. **提交清晰 commit**：
+2. **创建功能分支**：`git checkout -b feat/your-skill-name`
+3. **本地验证**：
+   ```bash
+   python validate-skills.py
+   ```
+   确保高严重度问题（🔴）为 0 项后再提交 PR。
+4. **提交清晰 commit**：
    - `docs:` 文档改进
    - `fix:` 错误修正
-   - `feat:` 新增内容或功能
+   - `feat:` 新增 Skill 或功能
    - `chore:` 杂项维护
-4. **推送到你的 Fork 并提交 PR**
-5. **等待审查**：所有 PR 都会经过 BDI 框架三层的质量审查
+5. **推送到你的 Fork 并提交 PR**
+6. **等待审查**：PR 会自动触发 GitHub Actions 的 `PR Gate` 检查，maintainer 会在此基础上进行 BDI 框架质量审查
 
 ---
 
@@ -67,10 +71,10 @@
 
 示例：
 ```
-docs: 补充 Docker 迁移的后续验证步骤
+feat: add skill-scaffold for rapid skill prototyping
 
-在 ACCEPTANCE_REPORT.md 中增加了 Colima 首次启动的
-网络要求和清理旧 Docker Desktop 残留的注意事项。
+新增一个 Flow Skill，帮助 contributor 在 5 分钟内生成
+符合标准的 SKILL.md 骨架，降低创作门槛。
 ```
 
 ---
