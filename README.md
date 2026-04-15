@@ -1,8 +1,8 @@
-# this-computer
+# bdi-flow-skills
 
-> 一个基于 BDI（Belief-Desire-Intention）框架和 Kimi Skills 方法论的系统优化与知识沉淀项目。
+> 一个基于 BDI（Belief-Desire-Intention）框架和 Kimi Skills 方法论的通用 Flow Skills 共享仓库。
 
-本项目记录了一套 macOS 开发环境的系统级优化实践，以及多个可复用的 Kimi Flow Skills。所有优化过程、验收标准和知识资产均以结构化方式沉淀，方便复现、迭代和社区贡献。
+本仓库收录了多个可复用、可验证的 Kimi Flow Skills，覆盖系统审计、项目初始化、隐私安全合规、开源治理和元自洽检查等场景。所有 Skill 均遵循统一的 `SKILL.md` 开放标准，欢迎社区贡献。
 
 ---
 
@@ -77,7 +77,7 @@
 
 ## 📜 许可证
 
-本项目采用 [MIT License](./LICENSE) 开源。
+本仓库采用 [MIT License](./LICENSE) 开源。
 
 ---
 

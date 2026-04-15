@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢你对 `this-computer` 项目的关注！
+感谢你对 `bdi-flow-skills` 项目的关注！
 
 本项目不仅是一个系统优化的记录，更是一个基于 **BDI（Belief-Desire-Intention）框架** 和 **Kimi Skills 方法论** 的知识沉淀仓库。我们欢迎所有建设性的贡献。
 
