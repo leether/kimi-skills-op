@@ -1,0 +1,16 @@
+# Local memory and private configs
+.kimi-memory/
+content-assets/
+.env*
+.zshrc
+.zshenv
+.bashrc
+.DS_Store
+node_modules/
+__pycache__/
+build/
+dist/
+*.pem
+*.key
+id_rsa
+id_ed25519
