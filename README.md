@@ -2,7 +2,7 @@
 
 > 一套面向 Kimi Skills 生态的 BDI-based 运维工具集。
 
-本仓库聚焦 **"如何设计、编写、检查、治理一个高质量的 Skills 仓库"**。收录的 5 个 Skill 覆盖了从认知框架、编写技巧、发布前检查、维护期自洽到社区治理的完整生命周期。所有 Skill 均遵循统一的 `SKILL.md` 开放标准，欢迎社区贡献。
+本仓库聚焦 **"如何设计、编写、检查、治理一个高质量的 Skills 仓库"**。收录的 6 个 Skill 覆盖了从认知框架、编写技巧、发布前检查、维护期自洽、社区治理到**闭环 orchestration** 的完整生命周期。所有 Skill 均遵循统一的 `SKILL.md` 开放标准，欢迎社区贡献。
 
 ---
 
@@ -46,16 +46,20 @@
 | [`repo-privacy-gate`](./skills/repo-privacy-gate/SKILL.md) | Flow | 公开仓库隐私安全合规检查门 |
 | [`self-consistency-gate`](./skills/self-consistency-gate/SKILL.md) | Flow | Skills 库自洽性检查门（元治理） |
 | [`kimi-skills-governance`](./skills/kimi-skills-governance/SKILL.md) | Flow | 开源仓库治理工作流 |
+| [`kimi-skills-op-loop`](./skills/kimi-skills-op-loop/SKILL.md) | Flow | **运维闭环 orchestration** |
 
 ### 生命周期对应关系
 
 ```
-设计阶段    →  bdi-agent
-编写阶段    →  programmatic-tools
-发布前检查  →  repo-privacy-gate
-维护期检查  →  self-consistency-gate
-社区治理    →  kimi-skills-governance
+设计阶段      →  bdi-agent
+编写阶段      →  programmatic-tools
+发布前检查    →  repo-privacy-gate
+维护期检查    →  self-consistency-gate
+社区治理      →  kimi-skills-governance
+闭环 orchestration → kimi-skills-op-loop
 ```
+
+`kimi-skills-op-loop` 不是另一个孤立的工具，而是把前 5 个 Skill 编织成**可持续运转系统的元工作流**。
 
 ---
 

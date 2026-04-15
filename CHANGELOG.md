@@ -12,9 +12,9 @@
 - 创建 `README.md`，说明项目定位、核心理念和优化成果概览。
 - 创建 `CONTRIBUTING.md`，定义贡献类型、提交规范和行为准则。
 - 创建 `CHANGELOG.md`，建立变更日志规范。
-- 新增 `skills/` 目录，收录 7 个可复用的 Kimi Flow Skills：
-  - `bdi-agent` | `programmatic-tools` | `project-onboarding` | `system-audit`
-  - `repo-privacy-gate` | `self-consistency-gate` | `kimi-skills-governance`
+- 新增 `skills/` 目录，收录 6 个可复用的 Kimi Flow Skills：
+  - `bdi-agent` | `programmatic-tools` | `repo-privacy-gate`
+  - `self-consistency-gate` | `kimi-skills-governance` | `kimi-skills-op-loop`
 
 ### Changed
 - `.gitignore` 增加对本地记忆、环境变量文件和敏感密钥的排除规则。
